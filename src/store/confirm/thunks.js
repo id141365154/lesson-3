@@ -7,7 +7,7 @@ import { getCodeValue } from './selectors'
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 export const confirmNumber = () => async (dispatch, getState) => {
-  dispatch(actions.start())
+  /*dispatch(actions.start())
 
   try {
     const code = getCodeValue(getState())
@@ -28,5 +28,5 @@ export const confirmNumber = () => async (dispatch, getState) => {
     dispatch(push(routes.EXCHANGE))
   } catch (e) {
     dispatch(actions.failure())
-  }
+  }*/
 }
