@@ -7,10 +7,10 @@ import { Header, TextField, ButtonAccent, RequestStatus, ModalHeader, SearchInpu
 import {CountriesList} from '@ui/organisms'
 import { PageTemplate, HBox, Flex1, Divider } from '@ui/atoms'
 
-export const SelectCountry = ({setCountry}) => {
+export const SelectCountry = ({setCountry, backToExchange}) => {
   return (
     <PageTemplate>
-      <ModalHeader action={console.log}>
+      <ModalHeader action={backToExchange}>
         <SearchInput onChange={console.log} />
       </ModalHeader>
       <HBox />

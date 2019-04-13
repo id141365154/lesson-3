@@ -30,13 +30,13 @@ const ValueContainer = styled.div`
 `
 
 export const SelectField = withTheme(
-  ({ label, error, onPress, tip, value, theme }) => (
+  ({ label, error, onPress, tip, value, theme, publicValue }) => (
     <FieldContainer>
       <FormLabel>{label}</FormLabel>
       <HBox height={theme.paddings.half} />
       <SelectFieldContainer error={error} onClick={onPress}>
         <ValueContainer>
-          <Body1>{value}</Body1>
+          <Body1>{publicValue}</Body1>
         </ValueContainer>
         <FormAdornment>
           <IconExpand />
@@ -51,6 +51,7 @@ export const SelectField = withTheme(
 SelectField.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
+  publicValue: PropTypes.string,
   error: PropTypes.string,
   tip: PropTypes.string,
   onPress: PropTypes.func.isRequired,

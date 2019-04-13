@@ -20,3 +20,9 @@ export const setCountry = (value) => async (dispatch, getState) => {
     dispatch(push(routes.EXCHANGE))
 }
 
+
+export const backToExchange = (value) => async (dispatch, getState) => {
+
+    dispatch(push(routes.EXCHANGE))
+}
+

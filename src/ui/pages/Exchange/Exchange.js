@@ -22,13 +22,15 @@ export const Exchange = ({select, value}) => {
       <Flex1>
         <Wrapper>
           <SelectField
-            label={value.country_1}
-            value={value.country_1}
+            label="Страна 1"
+            value={value.country_1.id}
+            publicValue={value.country_1.title}
             onPress={()=>(select('country_1'))}
           />
           <SelectField
-            label={value.country_2}
-            value={value.country_2}
+            label="Страна 2"
+            value={value.country_2.id}
+            publicValue={value.country_2.title}
             onPress={()=>(select('country_2'))}
           />
           <Divider />

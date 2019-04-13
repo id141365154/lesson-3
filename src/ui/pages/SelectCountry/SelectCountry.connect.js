@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 //import { signIn } from '@store/signIn/thunks'
 
 //import { selectCountry } from '@store/selectCountry/thunks'
-import { setCountry } from '@store/exchange/thunks'
+import { setCountry, backToExchange } from '@store/exchange/thunks'
 
 import { SelectCountry } from './SelectCountry'
 
@@ -17,5 +17,5 @@ const mapStateToProps = state => ({
 
 export const SelectCountryContainer = connect(
   mapStateToProps,
-  { setCountry },
+  { setCountry, backToExchange },
 )(SelectCountry)

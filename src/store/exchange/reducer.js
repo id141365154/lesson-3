@@ -18,6 +18,7 @@ export const reducer = (state = initialState, action) => {
     }
 
     case types.SET_COUNTRY:{
+
       return {
         ...state,
         [state.change]: action.payload.value
