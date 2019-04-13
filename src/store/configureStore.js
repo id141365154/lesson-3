@@ -7,9 +7,9 @@ import LocalForage from 'localforage'
 import { createRootReducer } from './rootReducer'
 
 const persistConfig = {
-  key: 'root1',
+  key: '34sdfskjefejfk',
   storage: LocalForage,
-  blacklist: ['router'],
+  blacklist: ['router','form'],
 }
 
 export const configureStore = history => {
