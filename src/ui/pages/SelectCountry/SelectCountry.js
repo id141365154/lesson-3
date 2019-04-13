@@ -7,7 +7,7 @@ import { Header, TextField, ButtonAccent, RequestStatus, ModalHeader, SearchInpu
 import {CountriesList} from '@ui/organisms'
 import { PageTemplate, HBox, Flex1, Divider } from '@ui/atoms'
 
-export const SelectCountry = () => {
+export const SelectCountry = ({setCountry}) => {
   return (
     <PageTemplate>
       <ModalHeader action={console.log}>
@@ -20,7 +20,7 @@ export const SelectCountry = () => {
           { title: 'Российская Федерация', id: 'RF' },
           { title: 'Соединенные Штаты Америки', id: 'USA' },
         ]}
-        selectCountry={console.log}
+        selectCountry={(val)=>(setCountry(val))}
       />
       <SearchStatus status="initial" />
     </PageTemplate>

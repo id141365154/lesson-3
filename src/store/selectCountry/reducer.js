@@ -11,17 +11,10 @@ export const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case types.OPEN_SELECT:{
+      console.log(state, action)
       return {
         ...state,
-        change: action.payload.value,
-      }
-    }
-
-    case types.SET_COUNTRY:{
-      return {
-        ...state,
-        [state.change]: action.payload.value
-        //value: action.payload.value,
+        value: action.payload.value,
       }
     }
     default:

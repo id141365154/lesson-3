@@ -11,12 +11,3 @@ export const select = (value) => async (dispatch, getState) => {
     dispatch(actions.openSelect(value))
     dispatch(push(routes.SELECT))
 }
-
-
-export const setCountry = (value) => async (dispatch, getState) => {
-
-    dispatch(actions.setCountry(value))
-
-    dispatch(push(routes.EXCHANGE))
-}
-

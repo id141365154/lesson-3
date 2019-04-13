@@ -6,11 +6,3 @@ export const openSelect = value => ({
     value,
   },
 })
-
-
-export const setCountry = value => ({
-  type: types.SET_COUNTRY,
-  payload: {
-    value,
-  },
-})
