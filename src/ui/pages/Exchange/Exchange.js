@@ -11,62 +11,103 @@ import {
 } from '@ui/molecules'
 import { DeliveryTime } from '@ui/organisms'
 
+import { Field } from 'redux-form'
+
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.paddings.main}px;
 `
 
-export const Exchange = ({select, value}) => {
+
+
+const Country1 = (props) =>{
   return (
-    <PageTemplate>
-      <Header icon="back" />
-      <Flex1>
+    <SelectField
+      label="Страна 1"
+      value={props.obValue.country_1.id}
+      publicValue={props.obValue.country_1.title}
+      onPress={() => (props.select('country_1'))}
+      input={props.input}
+      onChange={props.input.onChange}
+      onBlur={props.input.onBlur}
+
+    />
+  )
+}
+
+const Country2 = (props) =>{
+  return (
+    <SelectField
+      label="Страна 2"
+      value={props.obValue.country_2.id}
+      publicValue={props.obValue.country_2.title}
+      onPress={() => (props.select('country_2'))}
+      input={props.input}
+      onChange={props.input.onChange}
+      onBlur={props.input.onBlur}
+
+    />
+  )
+}
+
+export const Exchange = ({ select, value, handleSubmit }) => {
+  console.log('value', value)
+  return (
+    <form onSubmit={handleSubmit}>
+      <PageTemplate>
+        <Header icon="back"/>
+        <Flex1>
+          <Wrapper>
+            <Field
+              component={Country1}
+              name={'country_1'}
+              type={'text'}
+              select={select}
+              obValue={value}
+
+            />
+            <Field
+              component={Country2}
+              name={'country_2'}
+              type={'text'}
+              select={select}
+              obValue={value}
+
+            />
+            <Divider/>
+            <HBox/>
+            <TextField
+              label="Российский рубль (RUB)"
+              onChange={() => undefined}
+              tip="Текст подсказки к полю"
+              value="100"
+              endAdornment="₽"
+            />
+            <HBox/>
+            <TextField
+              label="Фунт стерлингов (GBP)"
+              onChange={() => undefined}
+              value="1"
+              tip="Текст подсказки к полю"
+              endAdornment="£"
+            />
+            <HBox/>
+            <DeliveryTime
+              fromValue="10:00"
+              toValue="20:00"
+              fromAction={() => undefined}
+              toAction={() => undefined}
+              tip="Выберите время доставки"
+            />
+            <HBox/>
+            <CheckboxWithText onPress={() => undefined}>
+              Со всеми условиями согласен, возможно вторая строка
+            </CheckboxWithText>
+          </Wrapper>
+        </Flex1>
         <Wrapper>
-          <SelectField
-            label="Страна 1"
-            value={value.country_1.id}
-            publicValue={value.country_1.title}
-            onPress={()=>(select('country_1'))}
-          />
-          <SelectField
-            label="Страна 2"
-            value={value.country_2.id}
-            publicValue={value.country_2.title}
-            onPress={()=>(select('country_2'))}
-          />
-          <Divider />
-          <HBox />
-          <TextField
-            label="Российский рубль (RUB)"
-            onChange={() => undefined}
-            tip="Текст подсказки к полю"
-            value="100"
-            endAdornment="₽"
-          />
-          <HBox />
-          <TextField
-            label="Фунт стерлингов (GBP)"
-            onChange={() => undefined}
-            value="1"
-            tip="Текст подсказки к полю"
-            endAdornment="£"
-          />
-          <HBox />
-          <DeliveryTime
-            fromValue="10:00"
-            toValue="20:00"
-            fromAction={() => undefined}
-            toAction={() => undefined}
-            tip="Выберите время доставки"
-          />
-          <HBox />
-          <CheckboxWithText onPress={() => undefined}>
-            Со всеми условиями согласен, возможно вторая строка
-          </CheckboxWithText>
+          <ButtonAccent onPress={() =>(handleSubmit())}>Отправить</ButtonAccent>
         </Wrapper>
-      </Flex1>
-      <Wrapper>
-        <ButtonAccent onPress={() => undefined}>Отправить</ButtonAccent>
-      </Wrapper>
-    </PageTemplate>
+      </PageTemplate>
+    </form>
   )
 }

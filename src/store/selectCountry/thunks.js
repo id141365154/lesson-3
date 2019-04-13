@@ -7,7 +7,6 @@ import * as actions from './actions'
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 export const select = (value) => async (dispatch, getState) => {
-
     dispatch(actions.openSelect(value))
     dispatch(push(routes.SELECT))
 }
