@@ -16,21 +16,21 @@ const StyledText = styled.div`
   font-size: 16px;
   color: ${({ theme }) => theme.pallete.nero};
 `
-
 export const DeliveryTime = withTheme(
   ({
-    theme,
-    fromValue,
-    toValue,
-    fromAction,
-    toAction,
-    fromError,
-    toError,
-    tip,
-  }) => (
+     theme,
+     fromValue,
+     toValue,
+     fromAction,
+     toAction,
+     fromError,
+     toError,
+     tip,
+     inputsNames,
+   }) => (
     <FieldContainer>
       <FormLabel>Время доставки</FormLabel>
-      <HBox height={theme.paddings.half} />
+      <HBox height={theme.paddings.half}/>
       <Row>
         <Flex1>
           <SelectInput
@@ -40,9 +40,9 @@ export const DeliveryTime = withTheme(
             startAdornment="от"
           />
         </Flex1>
-        <VBox />
+        <VBox/>
         <StyledText>&mdash;</StyledText>
-        <VBox />
+        <VBox/>
         <Flex1>
           <SelectInput
             value={toValue}
@@ -52,7 +52,7 @@ export const DeliveryTime = withTheme(
           />
         </Flex1>
       </Row>
-      <HBox height={theme.paddings.half} />
+      <HBox height={theme.paddings.half}/>
       {fromError || toError ? (
         <InputError>{fromError || toError}</InputError>
       ) : (
@@ -70,4 +70,5 @@ DeliveryTime.propTypes = {
   toAction: PropTypes.func.isRequired,
   toError: PropTypes.string,
   tip: PropTypes.string,
+  inputsNames: PropTypes.object,
 }

@@ -7,7 +7,7 @@ import { createBrowserHistory } from 'history'
 
 import { configureStore } from '@store/configureStore'
 import { ThemeProvider, theme, GlobalStyles } from '@ui/theme'
-import { SignIn, SignInConfirm, Exchange, SelectCountry } from '@ui/pages'
+import { SignIn, SignInConfirm, Exchange, SelectCountry, SelectTime } from '@ui/pages'
 import { ConnectedRouter } from 'connected-react-router'
 import { routes } from './routes'
 
@@ -28,7 +28,8 @@ class App extends Component {
                   <Route path={routes.SIGN_IN} exact component={SignIn} />
                   <Route path={routes.CONFIRM} component={SignInConfirm} />
                   <Route path={routes.EXCHANGE} component={Exchange} />
-                  <Route path={routes.SELECT} component={SelectCountry} />
+                  <Route path={routes.SELECT_COUNTRY} component={SelectCountry} />
+                  <Route path={routes.SELECT_TIME} component={SelectTime} />
                 </Switch>
               </>
             </ThemeProvider>

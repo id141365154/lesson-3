@@ -60,6 +60,12 @@ export const TextField = withTheme(
     name,
   }) => {
     const [focused, setFocused] = useState(false)
+
+    const handleChange = e => {
+        onChange(e)
+        setFocused(true)
+    }
+
     const handleFocus = e => {
       if (onFocus) {
         onFocus(e)
@@ -87,7 +93,7 @@ export const TextField = withTheme(
             placeholder={placeholder ? placeholder : ''}
             disabled={disabled}
             value={value}
-            onChange={e => onChange(e.currentTarget.value)}
+            onChange={handleChange} //e.currentTarget.value
             onFocus={handleFocus}
             onBlur={handleBlur}
           />

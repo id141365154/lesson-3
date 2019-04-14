@@ -1,0 +1,7 @@
+//export const CHANGE_NUMBER = 'signIn/CHANGE_NUMBER'
+export const OPEN_SELECT = 'exchange/OPEN_SELECT'
+export const SET_COUNTRY = 'exchange/SET_COUNTRY'
+export const OPEN_TIME_SELECT = 'exchange/OPEN_TIME_SELECT'
+export const SET_TIME = 'exchange/SET_TIME'
+export const HOURS_CHANGE = 'exchange/HOURS_CHANGE'
+export const MINUTES_CHANGE = 'exchange/MINUTES_CHANGE'

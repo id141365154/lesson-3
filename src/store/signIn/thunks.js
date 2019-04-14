@@ -7,9 +7,9 @@ import { getNumberValue } from './selectors'
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 export const signIn = () => async (dispatch, getState) => {
-  dispatch(actions.start())
+  //dispatch(actions.start())
 
-  try {
+ /* try {
     const number = getNumberValue(getState())
     const res = await fetch(
       `https://my-json-server.typicode.com/IgorAntonov/confirmation/number?${number}`,
@@ -27,5 +27,5 @@ export const signIn = () => async (dispatch, getState) => {
     dispatch(push(routes.CONFIRM))
   } catch (e) {
     dispatch(actions.failure())
-  }
+  }*/
 }
