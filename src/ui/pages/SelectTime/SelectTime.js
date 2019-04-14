@@ -37,9 +37,6 @@ const TimeListColItem = styled.div`
 
 
 export const SelectTime = ({backToExchange, setTime, hoursChange, minutesChange, timeFrom, timeTo, timeToChange}) => {
-    //console.log('timeFrom, timeTo',timeFrom, timeTo)
-    //console.log('timeToChange',timeToChange)
-    
   let currentTime = {}
   
   if (timeToChange =="time_to"){
@@ -49,7 +46,6 @@ export const SelectTime = ({backToExchange, setTime, hoursChange, minutesChange,
     currentTime = timeFrom
   }
 
-  console.log('currentTime',currentTime)
 
   let Hours = () => {
     let H = []

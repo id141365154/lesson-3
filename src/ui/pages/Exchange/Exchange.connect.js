@@ -20,7 +20,7 @@ const mapStateToProps = state => ({
       id: "USA",
       title:"Соединенные Штаты Америки"
     },
-    sum_1:1,
+    sum_1:0,
     sum_2:0,
     agree: false,
     delivery_time_from:'00:00',

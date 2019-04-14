@@ -126,7 +126,6 @@ export const RadioField = withTheme(
               name={name}
               type={"radio"}
               onChange={onChangeHandler}
-              checked={ checked ? checked : null }
             />
             <Check disabled={disabled}/>
             {labelText}
