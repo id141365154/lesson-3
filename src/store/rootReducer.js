@@ -11,9 +11,9 @@ import { reducer as exchange } from './exchange/reducer'
 export const createRootReducer = history =>
   combineReducers({
     router: connectRouter(history),
-      template,
+    template,
     signIn,
     confirm,
     exchange,
-    form:formReducer
+    form: formReducer,
   })

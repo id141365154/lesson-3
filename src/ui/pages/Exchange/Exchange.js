@@ -11,7 +11,7 @@ import {
 } from '@ui/molecules'
 import { DeliveryTime } from '@ui/organisms'
 
-import { Field } from 'redux-form'
+import { Field, Fields  } from 'redux-form'
 
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.paddings.main}px;
@@ -23,12 +23,10 @@ const Country1 = (props) =>{
   return (
     <SelectField
       label="Страна 1"
-      value={props.obValue.country_1.id}
-      publicValue={props.obValue.country_1.title}
+      value={props.input.value.id}
+      publicValue={props.input.value.title}
       onPress={() => (props.select('country_1'))}
-      input={props.input}
-      onChange={props.input.onChange}
-      onBlur={props.input.onBlur}
+
 
     />
   )
@@ -38,19 +36,62 @@ const Country2 = (props) =>{
   return (
     <SelectField
       label="Страна 2"
-      value={props.obValue.country_2.id}
-      publicValue={props.obValue.country_2.title}
+      value={props.input.value.id}
+      publicValue={props.input.value.title}
       onPress={() => (props.select('country_2'))}
-      input={props.input}
-      onChange={props.input.onChange}
-      onBlur={props.input.onBlur}
-
+      error={props.meta.touched && props.meta.error ? props.meta.error : null }
     />
   )
 }
 
-export const Exchange = ({ select, value, handleSubmit }) => {
-  console.log('value', value)
+const Sum1 = (props) => {
+  return(
+    <TextField
+      label="Российский рубль (RUB)"
+      tip="Текст подсказки к полю"
+      endAdornment="₽"
+      error={props.meta.touched && props.meta.error ? props.meta.error : null }
+      value={props.input.value}
+      onChange={props.input.onChange}
+      onFocus={props.input.onFocus}
+      onBlur={props.input.onBlur}
+    />
+  )
+}
+
+const Sum2 = (props) => {
+  return(
+    <TextField
+      label="Фунт стерлингов (GBP)"
+      tip="Текст подсказки к полю"
+      endAdornment="£"
+      error={props.meta.touched && props.meta.error ? props.meta.error : null }
+      value={props.input.value}
+      onChange={props.input.onChange}
+      onFocus={props.input.onFocus}
+      onBlur={props.input.onBlur}
+    />
+  )
+}
+
+
+const _DeliveryTime = (props)=>{
+  return (
+    <DeliveryTime
+      fromValue={props.delivery_time_from.input.value}
+      toValue={props.delivery_time_to.input.value}
+      fromAction={()=>(props.openTimeSelect('time_from'))}
+      toAction={()=>(props.openTimeSelect('time_to'))}
+      tip="Выберите время доставки"
+      inputsNames={{
+        from: 'delivery_time_from',
+        to:'delivery_time_to'
+      }}
+    />
+  )
+}
+
+export const Exchange = ({ select, value, handleSubmit, openTimeSelect }) => {
   return (
     <form onSubmit={handleSubmit}>
       <PageTemplate>
@@ -62,41 +103,32 @@ export const Exchange = ({ select, value, handleSubmit }) => {
               name={'country_1'}
               type={'text'}
               select={select}
-              obValue={value}
-
             />
             <Field
               component={Country2}
               name={'country_2'}
               type={'text'}
               select={select}
-              obValue={value}
 
             />
             <Divider/>
             <HBox/>
-            <TextField
-              label="Российский рубль (RUB)"
-              onChange={() => undefined}
-              tip="Текст подсказки к полю"
-              value="100"
-              endAdornment="₽"
+            <Field
+              component={Sum1}
+              name={'sum_1'}
+              type={'text'}
             />
             <HBox/>
-            <TextField
-              label="Фунт стерлингов (GBP)"
-              onChange={() => undefined}
-              value="1"
-              tip="Текст подсказки к полю"
-              endAdornment="£"
+            <Field
+              component={Sum2}
+              name={'sum_2'}
+              type={'text'}
             />
             <HBox/>
-            <DeliveryTime
-              fromValue="10:00"
-              toValue="20:00"
-              fromAction={() => undefined}
-              toAction={() => undefined}
-              tip="Выберите время доставки"
+            <Fields
+              component={_DeliveryTime}
+              openTimeSelect={openTimeSelect}
+              names={['delivery_time_from', 'delivery_time_to']}
             />
             <HBox/>
             <CheckboxWithText onPress={() => undefined}>

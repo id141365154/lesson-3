@@ -22,7 +22,7 @@ export const SelectCountry = ({setCountry, backToExchange}) => {
         ]}
         selectCountry={(val)=>(setCountry(val))}
       />
-      <SearchStatus status="initial" />
+      {/*<SearchStatus status="initial" />*/}
     </PageTemplate>
   )
 }

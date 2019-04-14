@@ -37,26 +37,26 @@ const HtmlInput = styled.input`
 
 export const SelectField = withTheme(
   ({ label, error, onPress, tip, value, theme, publicValue, onChange, onBlur }) => {
-    const changeHandler = (e) => {
+    /*const changeHandler = (e) => {
       onChange(e)
     }
 
     const blurHandler = (e) => {
       onBlur(e)
     }
-
+*/
 
     const pressHandler = (e) => {
       onPress(e)
     }
 
-    useEffect((effect) => { // Для того чтобы ReduxForm зафиксировал изменения значения
+    /*useEffect((effect) => { // Для того чтобы ReduxForm зафиксировал изменения значения
       let items = document.getElementsByClassName(HtmlInput.styledComponentId)
       for (let input of items) {
         input.focus()
         input.blur()
       }
-    })
+    })*/
 
     return (
       <FieldContainer>
@@ -65,11 +65,7 @@ export const SelectField = withTheme(
         <SelectFieldContainer error={error} onClick={pressHandler}>
           <ValueContainer>
             <Body1>{publicValue}</Body1>
-            <HtmlInput
-              onChange={changeHandler}
-              onBlur={blurHandler}
-              value={value}
-            />
+
           </ValueContainer>
           <FormAdornment>
             <IconExpand/>
@@ -89,6 +85,6 @@ SelectField.propTypes = {
   error: PropTypes.string,
   tip: PropTypes.string,
   onPress: PropTypes.func.isRequired,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
+/*  onChange: PropTypes.func,
+  onBlur: PropTypes.func,*/
 }
