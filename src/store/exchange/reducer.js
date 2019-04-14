@@ -18,7 +18,7 @@ const initialState = {
     m:''
   },
   sum_1:'',
-  sum_2:''
+  sum_2:'',
 }
 
 export const reducer = (state = initialState, action) => {

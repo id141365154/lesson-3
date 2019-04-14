@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 
 //import { getNumberValue, getStatus } from '@store/signIn/selectors'
 //import { changeNumber } from '@store/signIn/actions'
-import { select, openTimeSelect } from '@store/exchange/thunks'
+import { select, openTimeSelect, agreePress } from '@store/exchange/thunks'
 import { Exchange } from './Exchange'
 
 import { reduxForm } from 'redux-form'
@@ -19,7 +19,11 @@ const mapStateToProps = state => ({
     country_2:{
       id: "USA",
       title:"Соединенные Штаты Америки"
-    }
+    },
+    agree: false,
+    delivery_time_from:'00:00',
+    delivery_time_to:'00:00'
+
 
     /*country_1:"RF",
     country_2:"USA",
@@ -31,7 +35,7 @@ const mapStateToProps = state => ({
 
 export const ExchangeContainer = connect(
   mapStateToProps,
-  { select, openTimeSelect },
+  { select, openTimeSelect, agreePress },
 )(reduxForm({
   form: 'ExchangeForm', // a unique identifier for this form
   onSubmit: values=>{console.log('submit', values)},

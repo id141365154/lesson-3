@@ -13,8 +13,8 @@ const Wrapper = styled.div`
 `
 
 
-const CodeField = (props)=> {
-  return(
+const CodeField = (props) => {
+  return (
     <TextField
       label="Код"
       placeholder="1234"
@@ -27,17 +27,17 @@ const CodeField = (props)=> {
   )
 }
 
-export const SignInConfirm = ({ value, status, changeCode, confirmNumber, handleSubmit }) => (
+export const SignInConfirm = ({ value, status, changeCode, confirmNumber, handleSubmit, pristine, submitting }) => (
   <form onSubmit={handleSubmit}>
     <PageTemplate>
-      <Header title="Введите код" />
-      <Divider />
+      <Header title="Введите код"/>
+      <Divider/>
       <Flex1>
         <Wrapper>
-          <HBox height={9} />
+          <HBox height={9}/>
           <Body2>На указанный телефон выслан код подтверждения</Body2>
-          <HBox height={20} />
-          <Field name={'code'} type={'text'} component={CodeField} />
+          <HBox height={20}/>
+          <Field name={'code'} type={'text'} component={CodeField}/>
         </Wrapper>
         <RequestStatus
           status={status}
@@ -47,7 +47,9 @@ export const SignInConfirm = ({ value, status, changeCode, confirmNumber, handle
         />
       </Flex1>
       <Wrapper>
-        <ButtonAccent onPress={()=>{handleSubmit()}}>Отправить</ButtonAccent>
+        <ButtonAccent disabled={pristine || submitting} onPress={() => {
+          handleSubmit()
+        }}>Отправить</ButtonAccent>
       </Wrapper>
     </PageTemplate>
   </form>
@@ -58,5 +60,5 @@ SignInConfirm.propTypes = {
   status: PropTypes.string.isRequired,
   changeCode: PropTypes.func.isRequired,
   confirmNumber: PropTypes.func.isRequired,
-  handelSubmit: PropTypes.func
+  handelSubmit: PropTypes.func,
 }

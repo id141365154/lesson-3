@@ -31,6 +31,19 @@ export const setTime = value => ({
   },
 })
 
+export const updateForm_agree = value => (
+  {
+    type: '@@redux-form/CHANGE',
+    meta: {
+      form: 'ExchangeForm',
+      field: 'agree',
+      touch: true,
+      persistentSubmitErrors: false
+    },
+    payload: value
+  }
+)
+
 export const updateForm_setTime_from = value => (
   {
     type: '@@redux-form/CHANGE',

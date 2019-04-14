@@ -28,7 +28,7 @@ const PhoneInput = (props)=> {
   )
 }
 
-export const SignIn = ({ status, changeNumber, signIn, handleSubmit }) => (
+export const SignIn = ({ status, changeNumber, signIn, handleSubmit, pristine, submitting }) => (
   <form onSubmit={handleSubmit}>
     <PageTemplate>
       <Header title="Ввод номера телефона"/>
@@ -48,7 +48,7 @@ export const SignIn = ({ status, changeNumber, signIn, handleSubmit }) => (
         />
       </Flex1>
       <Wrapper>
-        <ButtonAccent onPress={()=>{handleSubmit()}}>Отправить</ButtonAccent>
+        <ButtonAccent disabled={pristine || submitting} onPress={()=>{handleSubmit()}}>Отправить</ButtonAccent>
       </Wrapper>
     </PageTemplate>
   </form>

@@ -11,15 +11,14 @@ import {
 } from '@ui/molecules'
 import { DeliveryTime } from '@ui/organisms'
 
-import { Field, Fields  } from 'redux-form'
+import { Field, Fields } from 'redux-form'
 
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.paddings.main}px;
 `
 
 
-
-const Country1 = (props) =>{
+const Country1 = (props) => {
   return (
     <SelectField
       label="Страна 1"
@@ -32,25 +31,25 @@ const Country1 = (props) =>{
   )
 }
 
-const Country2 = (props) =>{
+const Country2 = (props) => {
   return (
     <SelectField
       label="Страна 2"
       value={props.input.value.id}
       publicValue={props.input.value.title}
       onPress={() => (props.select('country_2'))}
-      error={props.meta.touched && props.meta.error ? props.meta.error : null }
+      error={props.meta.touched && props.meta.error ? props.meta.error : null}
     />
   )
 }
 
 const Sum1 = (props) => {
-  return(
+  return (
     <TextField
       label="Российский рубль (RUB)"
       tip="Текст подсказки к полю"
       endAdornment="₽"
-      error={props.meta.touched && props.meta.error ? props.meta.error : null }
+      error={props.meta.touched && props.meta.error ? props.meta.error : null}
       value={props.input.value}
       onChange={props.input.onChange}
       onFocus={props.input.onFocus}
@@ -60,12 +59,12 @@ const Sum1 = (props) => {
 }
 
 const Sum2 = (props) => {
-  return(
+  return (
     <TextField
       label="Фунт стерлингов (GBP)"
       tip="Текст подсказки к полю"
       endAdornment="£"
-      error={props.meta.touched && props.meta.error ? props.meta.error : null }
+      error={props.meta.touched && props.meta.error ? props.meta.error : null}
       value={props.input.value}
       onChange={props.input.onChange}
       onFocus={props.input.onFocus}
@@ -75,23 +74,36 @@ const Sum2 = (props) => {
 }
 
 
-const _DeliveryTime = (props)=>{
+const _DeliveryTime = (props) => {
   return (
     <DeliveryTime
       fromValue={props.delivery_time_from.input.value}
       toValue={props.delivery_time_to.input.value}
-      fromAction={()=>(props.openTimeSelect('time_from'))}
-      toAction={()=>(props.openTimeSelect('time_to'))}
+      fromAction={() => (props.openTimeSelect('time_from'))}
+      toAction={() => (props.openTimeSelect('time_to'))}
       tip="Выберите время доставки"
       inputsNames={{
         from: 'delivery_time_from',
-        to:'delivery_time_to'
+        to: 'delivery_time_to',
       }}
     />
   )
 }
 
-export const Exchange = ({ select, value, handleSubmit, openTimeSelect }) => {
+
+const _CheckboxWithText = (props) => {
+  return (
+    <CheckboxWithText
+      onPress={props.onPress}
+      value={props.input.value}
+      error={props.meta.touched && props.meta.error ? props.meta.error : null}
+    >
+      Со всеми условиями согласен, возможно вторая строка
+    </CheckboxWithText>
+  )
+}
+
+export const Exchange = ({ select, value, handleSubmit, openTimeSelect, agreePress, pristine, submitting }) => {
   return (
     <form onSubmit={handleSubmit}>
       <PageTemplate>
@@ -131,13 +143,16 @@ export const Exchange = ({ select, value, handleSubmit, openTimeSelect }) => {
               names={['delivery_time_from', 'delivery_time_to']}
             />
             <HBox/>
-            <CheckboxWithText onPress={() => undefined}>
-              Со всеми условиями согласен, возможно вторая строка
-            </CheckboxWithText>
+            <Field
+              component={_CheckboxWithText}
+              name={'agree'}
+              type={'checkbox'}
+              onPress={agreePress}
+            />
           </Wrapper>
         </Flex1>
         <Wrapper>
-          <ButtonAccent onPress={() =>(handleSubmit())}>Отправить</ButtonAccent>
+          <ButtonAccent disabled={pristine || submitting} onPress={() => (handleSubmit())}>Отправить</ButtonAccent>
         </Wrapper>
       </PageTemplate>
     </form>
