@@ -2,58 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb3532da-26f3-460b-a499-e4b8f5d92427" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/exchange/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/exchange/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/exchange/selectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/exchange/thunks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/exchange/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectCountry/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectCountry/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectCountry/selectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectCountry/thunks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectCountry/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectTime/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectTime/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectTime/selectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectTime/thunks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectTime/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.story.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SelectCountry/SelectCountry.connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.connect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.story.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SignIn/SignIn.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/pages/SignInConfirm/SignInConfirm.validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/confirm/thunks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/confirm/thunks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/rootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/signIn/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/signIn/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/signIn/selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/signIn/selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/signIn/thunks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/signIn/thunks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/signIn/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/signIn/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/Country/Country.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/Country/Country.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/ModalHeader/ModalHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/ModalHeader/ModalHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/SelectField/SelectField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/SelectField/SelectField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/TextField/TextField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/TextField/TextField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/TextareaField/TextareaField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/TextareaField/TextareaField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/organisms/DeliveryTime/DeliveryTime.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/organisms/DeliveryTime/DeliveryTime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/SelectCountry/SelectCountry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/SelectCountry/SelectCountry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/SignIn/SignIn.connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/SignIn/SignIn.connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/SignInConfirm/SignInConfirm.connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/SignInConfirm/SignInConfirm.connect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/SignInConfirm/SignInConfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/SignInConfirm/SignInConfirm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -79,8 +28,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="422">
-                <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              <first_editor relative-caret-position="367">
+                <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
               </first_editor>
               <second_editor />
             </state>
@@ -300,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5366000" />
+    <option name="totallyTimeSpent" value="5436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -320,7 +269,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.048309177" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.52012885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -466,8 +415,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="422">
-            <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <first_editor relative-caret-position="367">
+            <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
           </first_editor>
           <second_editor />
         </state>
