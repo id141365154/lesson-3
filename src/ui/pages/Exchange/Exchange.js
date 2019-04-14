@@ -12,6 +12,7 @@ import {
 import { DeliveryTime } from '@ui/organisms'
 
 import { Field, Fields } from 'redux-form'
+import { getSum1, getSum2 } from '@store/exchange/selectors'
 
 const Wrapper = styled.div`
   padding: ${({ theme }) => theme.paddings.main}px;
@@ -44,14 +45,18 @@ const Country2 = (props) => {
 }
 
 const Sum1 = (props) => {
+  const changeHandler = (e) => {
+    props.updateSums(e.target.value, props)
+    //props.onChange(e)
+  }
   return (
     <TextField
       label="Российский рубль (RUB)"
       tip="Текст подсказки к полю"
       endAdornment="₽"
       error={props.meta.touched && props.meta.error ? props.meta.error : null}
-      value={props.input.value}
-      onChange={props.input.onChange}
+      value={props.input.value+''}
+      onChange={changeHandler}
       onFocus={props.input.onFocus}
       onBlur={props.input.onBlur}
     />
@@ -59,14 +64,17 @@ const Sum1 = (props) => {
 }
 
 const Sum2 = (props) => {
+  const changeHandler = (e) => {
+    props.updateSums(e.target.value, props)
+  }
   return (
     <TextField
       label="Фунт стерлингов (GBP)"
       tip="Текст подсказки к полю"
       endAdornment="£"
       error={props.meta.touched && props.meta.error ? props.meta.error : null}
-      value={props.input.value}
-      onChange={props.input.onChange}
+      value={props.input.value+''}
+      onChange={changeHandler}
       onFocus={props.input.onFocus}
       onBlur={props.input.onBlur}
     />
@@ -92,18 +100,19 @@ const _DeliveryTime = (props) => {
 
 
 const _CheckboxWithText = (props) => {
+ console.log(props.input.value)
   return (
     <CheckboxWithText
       onPress={props.onPress}
-      value={props.input.value}
-      error={props.meta.touched && props.meta.error ? props.meta.error : null}
+      value={props.input.value == '' ? false : true}
+      error={(props.meta.touched && props.meta.error) ? props.meta.error : null}
     >
       Со всеми условиями согласен, возможно вторая строка
     </CheckboxWithText>
   )
 }
 
-export const Exchange = ({ select, value, handleSubmit, openTimeSelect, agreePress, pristine, submitting }) => {
+export const Exchange = ({ select, value, handleSubmit, openTimeSelect, agreePress, pristine, submitting, updateSums, getSums }) => {
   return (
     <form onSubmit={handleSubmit}>
       <PageTemplate>
@@ -129,12 +138,16 @@ export const Exchange = ({ select, value, handleSubmit, openTimeSelect, agreePre
               component={Sum1}
               name={'sum_1'}
               type={'text'}
+              updateSums={updateSums}
+              getSums={getSums}
             />
             <HBox/>
             <Field
               component={Sum2}
               name={'sum_2'}
               type={'text'}
+              updateSums={updateSums}
+              getSums={getSums}
             />
             <HBox/>
             <Fields

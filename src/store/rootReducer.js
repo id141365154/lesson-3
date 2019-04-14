@@ -7,6 +7,7 @@ import { reducer as template } from './template/reducer'
 import { reducer as signIn } from './signIn/reducer'
 import { reducer as confirm } from './confirm/reducer'
 import { reducer as exchange } from './exchange/reducer'
+//import { currency } from './exchange/reducer'
 
 export const createRootReducer = history =>
   combineReducers({
@@ -15,5 +16,6 @@ export const createRootReducer = history =>
     signIn,
     confirm,
     exchange,
+
     form: formReducer,
   })

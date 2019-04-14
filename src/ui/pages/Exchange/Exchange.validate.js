@@ -13,10 +13,18 @@ export const validate = values => {
     errors.sum_1 = 'Only digits'
   }
 
+  if (values.sum_1 <= 0){
+    errors.sum_1 = 'Must be more than 0'
+  }
+
   if (!values.sum_2) {
     errors.sum_2 = 'Required'
   } else if (values.sum_2.length <= 0 || /[0-9]$/i.test(values.sum_2) !== true) {
     errors.sum_2 = 'Only digits'
+  }
+
+  if (values.sum_2 <= 0){
+    errors.sum_2 = 'Must be more than 0'
   }
 
   if (!values.agree) {

@@ -1,4 +1,18 @@
 import * as types from './types'
+import { createAction } from 'redux-act'
+
+
+//export const UPDATE_SUM_1 = createAction('UPDATE_SUM_1');
+//export const UPDATE_SUM_2 = createAction('update sum 2');
+
+
+export const updateSums =( value ,props) => ({
+  type: types.UPDATE_SUMS,
+  payload: {
+    value,
+    props
+  },
+})
 
 export const openSelect = value => ({
   type: types.OPEN_SELECT,
@@ -30,6 +44,32 @@ export const setTime = value => ({
     value,
   },
 })
+
+export const updateForm_sum_1 = value => (
+  {
+    type: '@@redux-form/CHANGE',
+    meta: {
+      form: 'ExchangeForm',
+      field: 'sum_1',
+      touch: true,
+      persistentSubmitErrors: false
+    },
+    payload: value
+  }
+)
+
+export const updateForm_sum_2 = value => (
+  {
+    type: '@@redux-form/CHANGE',
+    meta: {
+      form: 'ExchangeForm',
+      field: 'sum_2',
+      touch: true,
+      persistentSubmitErrors: false
+    },
+    payload: value
+  }
+)
 
 export const updateForm_agree = value => (
   {
