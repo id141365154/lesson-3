@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb3532da-26f3-460b-a499-e4b8f5d92427" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/exchange/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="-272">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -30,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+            <state relative-caret-position="-136">
+              <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -43,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
-              <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+              <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -51,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="130" column="38" lean-forward="true" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
+            <state>
+              <caret line="116" selection-start-line="116" selection-end-line="121" selection-end-column="22" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -67,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/ui/organisms/DeliveryTime/DeliveryTime.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="519">
-              <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -79,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/src/store/exchange/actions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
-              <caret line="140" column="26" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="26" />
+              <caret line="100" column="26" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="26" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -87,12 +84,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
+              <first_editor relative-caret-position="397">
+                <caret line="40" column="134" selection-start-line="40" selection-start-column="134" selection-end-line="40" selection-end-column="134" />
               </first_editor>
               <second_editor />
             </state>
@@ -103,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
-              <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -112,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/store/exchange/thunks.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="366">
-              <caret line="67" column="20" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="20" />
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -150,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/ui/pages/SelectCountry/SelectCountry.connect.js" />
         <option value="$PROJECT_DIR$/src/ui/pages/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/store/rootReducer.js" />
         <option value="$PROJECT_DIR$/src/store/exchange/types.js" />
         <option value="$PROJECT_DIR$/src/store/exchange/actions.js" />
@@ -163,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js" />
         <option value="$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.js" />
         <option value="$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -187,83 +184,6 @@
             <path>
               <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
               <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="exchange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="molecules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="molecules" type="462c0819:PsiDirectoryNode" />
-              <item name="RadioField" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="organisms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="organisms" type="462c0819:PsiDirectoryNode" />
-              <item name="DeliveryTime" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Exchange" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson-3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson-3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="SelectTime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,13 +244,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25472000" />
+    <option name="totallyTimeSpent" value="25495000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4964029" visible="true" weight="0.20163691" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4964029" visible="true" weight="0.20163691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50359714" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -344,7 +264,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.44927537" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.061191626" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -521,16 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="87" lean-forward="true" selection-start-line="9" selection-start-column="87" selection-end-line="9" selection-end-column="87" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/exchange/selectors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -541,7 +451,7 @@
     <entry file="file://$PROJECT_DIR$/src/store/exchange/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
-          <caret line="140" column="26" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="26" />
+          <caret line="100" column="26" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="26" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -560,15 +470,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/exchange/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="23" />
+        <state relative-caret-position="-272">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/exchange/thunks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="20" />
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -578,7 +488,7 @@
     <entry file="file://$PROJECT_DIR$/src/ui/organisms/DeliveryTime/DeliveryTime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
-          <caret line="72" column="32" lean-forward="true" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+          <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -587,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
+        <state relative-caret-position="-136">
+          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -598,14 +508,14 @@
     <entry file="file://$PROJECT_DIR$/src/ui/pages/Exchange/Exchange.validate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/pages/SelectTime/SelectTime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
-          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -614,11 +524,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/molecules/RadioField/RadioField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="130" column="38" lean-forward="true" selection-start-line="130" selection-start-column="38" selection-end-line="130" selection-end-column="38" />
+        <state>
+          <caret line="116" selection-start-line="116" selection-end-line="121" selection-end-column="22" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="397">
+            <caret line="40" column="134" selection-start-line="40" selection-start-column="134" selection-end-line="40" selection-end-column="134" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
