@@ -83,6 +83,7 @@ const Sum2 = (props) => {
 
 
 const _DeliveryTime = (props) => {
+  console.log(props)
   return (
     <DeliveryTime
       fromValue={props.delivery_time_from.input.value}
@@ -94,13 +95,13 @@ const _DeliveryTime = (props) => {
         from: 'delivery_time_from',
         to: 'delivery_time_to',
       }}
+      toError={(props.delivery_time_to.meta.touched && props.delivery_time_to.meta.error) ? props.delivery_time_to.meta.error : null}
     />
   )
 }
 
 
 const _CheckboxWithText = (props) => {
- console.log(props.input.value)
   return (
     <CheckboxWithText
       onPress={props.onPress}

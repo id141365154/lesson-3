@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withTheme, styled, theme } from '@ui/theme'
-import { HBox} from '@ui/atoms'
+import { HBox } from '@ui/atoms'
 import { InputError, InputTip } from '@ui/atoms/Typography'
-
 
 
 const Container = styled.label`
@@ -14,7 +13,7 @@ const Container = styled.label`
   line-height:24px;
   outline:none;
   border-bottom: 1px solid transparent;
-  color : ${({disabled})=>(disabled ? theme.pallete.whiteSmoke : theme.pallete.gray2)}
+  color : ${({ disabled }) => (disabled ? theme.pallete.whiteSmoke : theme.pallete.gray2)}
   :focus{border-bottom:1px solid #eee;}
 `
 
@@ -24,7 +23,7 @@ const RadioBox = styled.div`
   top:1px;
   width:20px;
   height:20px;
-  border:1px solid ${({disabled})=>(disabled ? theme.pallete.whiteSmoke : theme.pallete.controlsBorder)}
+  border:1px solid ${({ disabled }) => (disabled ? theme.pallete.whiteSmoke : theme.pallete.controlsBorder)}
   border-radius:50%;
 `
 const CheckStyled = styled.div`
@@ -44,10 +43,10 @@ const HtmlRadio = styled.input`
 `
 
 
-const Check = ({value, disabled}) => (
-  <CheckStyled value={value}>
+const Check = ({ value, disabled, checked }) => (
+  <CheckStyled value={value} checked={checked}>
     <svg width={24} height={24} fill="none">
-      <circle cx={12} cy={12} r={10} fill={disabled ? theme.pallete.whiteSmoke : theme.pallete.radicalRed} />
+      <circle cx={12} cy={12} r={10} fill={disabled ? theme.pallete.whiteSmoke : theme.pallete.radicalRed}/>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -60,7 +59,8 @@ const Check = ({value, disabled}) => (
 
 
 export const RadioField = withTheme(
-  ({ theme,
+  ({
+     theme,
      value,
      name,
      labelText,
@@ -71,69 +71,73 @@ export const RadioField = withTheme(
      onClick,
      onBlur,
      onFocus,
-     onChange
-  }) => {
+     onChange,
+   }) => {
 
 
-      const onClickHandler = (e)=>{
-        if (typeof e.target.children[1] !== 'undefined'){
-          if (onClick){
-            onClick(e)
-          }
+    const onClickHandler = (e) => {
+
+      if (typeof e.target.children[1] !== 'undefined') {
+
+        if (onClick) {
+          onClick(e)
         }
       }
-
-    const onFocusHandler = (e)=>{
-        if (onFocus) {
-          onFocus(e)
-        }
     }
 
-    const onBlurHandler = (e)=>{
+    const onFocusHandler = (e) => {
+      if (onFocus) {
+        //onFocus(e)
+      }
+    }
+
+    const onBlurHandler = (e) => {
       if (onBlur) {
-        onBlur(e)
+        //onBlur(e)
       }
     }
 
-    const onKeyHandler = (e)=>{
-      if (e.which == 32 && typeof e.target.children[1] !== 'undefined'){ // space
-        e.target.children[1].checked = true
+    const onKeyHandler = (e) => {
+      if (e.which == 32 && typeof e.target.children[1] !== 'undefined') { // space
+        //e.target.children[1].checked = true
       }
     }
 
 
-    const onChangeHandler = (e)=>{
-      if (onChange){
-        onChange(e.target.value);
+    const onChangeHandler = (e) => {
+      if (onChange) {
+        // onChange(e.target.value)
       }
     }
 
-      return (
-        <div>
-          <Container
-            tabIndex={'0'}
+    return (
+      <div>
+        <Container
+          tabIndex={'0'}
+          disabled={disabled}
+          onClick={onClickHandler}
+          onFocus={onFocusHandler}
+          onBlur={onBlurHandler}
+          onKeyPress={onKeyHandler}
+
+        >
+          <RadioBox disabled={disabled}/>
+          <HtmlRadio
             disabled={disabled}
-            onClick={onClickHandler}
-            onFocus={onFocusHandler}
-            onBlur={onBlurHandler}
-            onKeyPress={onKeyHandler}
-          >
-            <RadioBox disabled={disabled}/>
-            <HtmlRadio
-              disabled={disabled}
-              onBlur={onBlur}
-              value={value}
-              name={name}
-              type={"radio"}
-              onChange={onChangeHandler}
-            />
-            <Check disabled={disabled}/>
-            {labelText}
-          </Container>
-          <HBox height={theme.paddings.half} />
-          {error ? <InputError>{error}</InputError> : <InputTip>{tip}</InputTip>}
-        </div>
-      )
+            onBlur={onBlur}
+            value={value}
+            name={name}
+            type={'radio'}
+            onChange={onChangeHandler}
+            //checked={checked ? 'checked' : fa}
+          />
+          <Check disabled={disabled}/>
+          {labelText}
+        </Container>
+        <HBox height={theme.paddings.half}/>
+        {error ? <InputError>{error}</InputError> : <InputTip>{tip}</InputTip>}
+      </div>
+    )
   },
 )
 
@@ -148,5 +152,5 @@ RadioField.propTypes = {
   onClick: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 }

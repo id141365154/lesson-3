@@ -13,7 +13,7 @@ export const validate = values => {
     errors.sum_1 = 'Only digits'
   }
 
-  if (values.sum_1 <= 0){
+  if (values.sum_1 <= 0) {
     errors.sum_1 = 'Must be more than 0'
   }
 
@@ -23,13 +23,28 @@ export const validate = values => {
     errors.sum_2 = 'Only digits'
   }
 
-  if (values.sum_2 <= 0){
+  if (values.sum_2 <= 0) {
     errors.sum_2 = 'Must be more than 0'
   }
 
   if (!values.agree) {
-    errors.agree = "Required"
+    errors.agree = 'Required'
   }
-  console.log('errors',errors);
+
+  if (values.delivery_time_from && values.delivery_time_to) {
+    let tDeliveryFrom = values.delivery_time_from.split(':')
+    let tDeliveryTo = values.delivery_time_to.split(':')
+
+    let dFrom = new Date();
+    dFrom.setHours(tDeliveryFrom[0],tDeliveryFrom[1],0);
+    let dTo = new Date();
+    dTo.setHours(tDeliveryTo[0],tDeliveryTo[1],0);
+
+    if (dTo<=dFrom) {
+      errors.delivery_time_to = 'Too early'
+    }
+  }
+
+  console.log('errors', errors)
   return errors
 }
